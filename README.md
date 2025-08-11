@@ -19,7 +19,7 @@
 
   ## 📦 Installation Steps
 
-### **1️⃣ Clone the Repository**
+### Clone the Repository
 ```bash
 git clone https://github.com/charurathour/Document_rag.git
 cd Document_rag
