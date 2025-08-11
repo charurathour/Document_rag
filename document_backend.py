@@ -47,7 +47,7 @@ def create_vector_db(pdf_path):
 
     # Create vectorstore in memory (no need to persist)
     vectorstore = Chroma.from_documents(chunks, embedding_model)
-    return vectorstore.as_retriever(search_type='similarity', search_kwargs={'k': 2})
+    return vectorstore.as_retriever(search_type='similarity', search_kwargs={'k': 1})
 
 def generate_answer(prompt, retriever):
     """Generate answer using the retriever from uploaded document."""
@@ -84,6 +84,6 @@ def generate_answer(prompt, retriever):
             messages=prompt,
             temperature=0
         )
-        return response.choices[0].message.content.strip()
+        return response.choices[0].message.content.strip(), context_for_query
     except Exception as e:
         return f"❌ Error: {e}"

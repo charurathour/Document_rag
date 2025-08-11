@@ -5,7 +5,7 @@ import os
 # Page settings
 st.set_page_config(page_title="Basic Chatbot", layout="wide")
 
-st.title("💬 Basic Chatbot UI")
+st.title("Document Chatbot")
 
 with st.sidebar:
     st.header("📄 Upload Document")
@@ -39,6 +39,10 @@ if user_input := st.chat_input("Type your message here..."):
     st.chat_message("user").markdown(user_input)
     # Temporary bot reply (for testing only)
     with st.spinner("Thinking..."):
-        answer = generate_answer(user_input, st.session_state.get("retriever", None))
+        answer, context = generate_answer(user_input, st.session_state.get("retriever", None))
     st.session_state.messages.append({"role": "assistant", "content": answer})
     st.chat_message("assistant").markdown(answer)
+
+    # Show context right after answer
+    with st.expander("📄 Retrieved Context"):
+        st.markdown(context)
