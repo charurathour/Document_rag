@@ -5,7 +5,7 @@ import os
 # Page settings
 st.set_page_config(page_title="Basic Chatbot", layout="wide")
 
-st.title("💬 Basic Chatbot UI")
+st.title("Document Chatbot")
 
 with st.sidebar:
     st.header("📄 Upload Document")
