@@ -39,4 +39,4 @@ Create a .env file in the root directory:
 OPENAI_API_KEY=your_openai_api_key_here
 
 ### Run the Application
-streamlit run app.py
+streamlit run document_app.py
