@@ -1,5 +1,5 @@
 import streamlit as st
-from document_back_back import generate_answer, create_vector_db
+from document_backend import generate_answer, create_vector_db
 import os
 import shutil
 
