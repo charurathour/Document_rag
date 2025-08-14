@@ -1,5 +1,8 @@
 # Document_rag
 
+  ## Video Link:
+https://drive.google.com/file/d/1Jvhv8De5I1O-2DbPDXEjzEzLKu0eL60a/view?usp=drive_link
+
 ## Document Uploader & RAG Chatbot
 
 ## 🚀 Features
@@ -41,5 +44,4 @@ OPENAI_API_KEY=your_openai_api_key_here
 ### Run the Application
 streamlit run document_app.py
 
-## **Video Link:**
-https://drive.google.com/file/d/1Jvhv8De5I1O-2DbPDXEjzEzLKu0eL60a/view?usp=drive_link
+
